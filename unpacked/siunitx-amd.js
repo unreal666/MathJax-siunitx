@@ -33,4 +33,4 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
   // amd-replace-stop
 });
 
-MathJax.Ajax.loadComplete("[Contrib]/siunitx/unpacked/siunitx-amd.js");
+MathJax.Ajax.loadComplete("[siunitx]/unpacked/siunitx-amd.js");

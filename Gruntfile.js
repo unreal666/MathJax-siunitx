@@ -40,7 +40,7 @@ module.exports = function(grunt) {
             main = main.substring(0,start_pos)
               + cleaned
               + main.substring(stop_pos).replace(
-                  /(MathJax\.Ajax\.loadComplete\("\[Contrib\]\/siunitx).*?("\);)/,
+                  /(MathJax\.Ajax\.loadComplete\("\[siunitx\]).*?("\);)/,
                   '$1/unpacked/siunitx.js$2'
                 );
             fs.writeFileSync(outputFile, main);
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
           options: {
             process: function (content, srcpath) {
               return content.replace(
-                  /(MathJax\.Ajax\.loadComplete\("\[Contrib\]\/siunitx).*?("\);)/,
+                  /(MathJax\.Ajax\.loadComplete\("\[siunitx\]).*?("\);)/,
                   '$1/siunitx.js$2'
               );
             }
